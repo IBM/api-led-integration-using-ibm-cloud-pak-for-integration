@@ -2,7 +2,9 @@
 
 Login to ICP4i and navigate to App Connect Designer. Click on the `Car Insurance Cognitive API Lab Short` tile on the dashboard.
 
-<img src="./images/image-20200616161203051.png" alt="image-20200616161203051" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616161203051.png" alt="image-20200616161203051" width="50%" align="left"/>
+
+
 
 What you can see first is our API model.
 
@@ -10,7 +12,7 @@ App Connect Designer builds your API for you – you don’t need to worry about
 
 These are the fields we are going to use for our API – we’ve imported them to save you time. You can rename them if you wish but if you do, our test scripts for the APIs won’t match – or work, so leave them as they are for now.
 
-![image-20200616135210029](./images/image-20200616135210029.png)
+<img src="./images/image-20200616135210029.png" alt="image-20200616135210029" width="50%" />
 
 Note that we tell our API which field is the key – in our case, CaseReference. When creating RESTful APIs, they should be resource based and each resource should have a unique key.
 
@@ -26,7 +28,7 @@ Now we want to do a `Create Car Repair Claim` operation.
 
 Click `Operations` – operations are the actions that the API exposes with the data.
 
-<img src="./images/image-20200616135340633.png" alt="image-20200616135340633" style="zoom:60%;" align="left" />
+<img src="./images/image-20200616135340633.png" alt="image-20200616135340633" width="60%" align="left" />
 
 We can have multiple operations in one API – such as `Create` `Retrieve` `Update` etc. The tooling auto-generates good REST for you, translating into HTTP verbs like GET and POST automatically. You don’t need to know REST to build APIs with ICP4i – the knowledge you need is built in.
 
@@ -36,11 +38,11 @@ In this exercise, we’re going to build just one operation – you can add more
 
 We’re going to go into the flow logic – click `Edit Flow`
 
-<img src="./images/image-20200616135559162.png" alt="image-20200616135559162" style="zoom:50%;" align="left" />
+<img src="./images/image-20200616135559162.png" alt="image-20200616135559162" width="50%" align="left" />
 
 You’ll now see the flow in the designer flow editor here:
 
-<img src="./images/image-20200616135644866.png" alt="image-20200616135644866" style="zoom:67%;" align="left"/>
+<img src="./images/image-20200616135644866.png" alt="image-20200616135644866" width="67%" align="left"/>
 
 See the `App Connect Trial` account name on the IBM Watson Visual Recognition? That’s the reason we had to get the account name correct so it matched.
 
@@ -92,7 +94,7 @@ You can see that we’ve mapped out `PhotoOfCar` field from our request. You can
 
 Click the hamburger (three lines) pull down next to the field:
 
-<img src="./images/image-20200616172001428.png" alt="image-20200616172001428" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616172001428.png" alt="image-20200616172001428" width="50%" align="left"/>
 
 All of the fields that are in the flow so far are available – just click on the one you want. This is how ‘mapping’ is done in designer – it’s like filling in cells in a spreadsheet.
 
@@ -104,7 +106,7 @@ Watson will return a list of what it thinks it can see in a picture, each with a
 
 For example, for one of our test pictures, we will use a picture of a Subaru SUV. If we ask Watson to look at this, we see the following – it’s .87 (87%) confident it can see a car in the picture.
 
-<img src="./images/image-20200616172209776.png" alt="image-20200616172209776" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616172209776.png" alt="image-20200616172209776" width="50%" align="left"/>
 
 (This screenshot is from Watson Studio – Available for free in the IBM Cloud – search for it and you can try it yourself with your cloud account and your Visual Recognition Service instance)
 
@@ -122,15 +124,15 @@ Click on the menu on the right, then expand ‘IBM Watson Visual Recognition’
 
 *(in the lab environment, you might need to zoom out on the browser to about 67% to see the menu – use the Firefox hamburger menu on the top right and choose ‘zoom’ as below)*
 
-<img src="./images/image-20200616174222627.png" alt="image-20200616174222627" style="zoom:50%;" align="left" />
+<img src="./images/image-20200616174222627.png" alt="image-20200616174222627" width="50%" align="left" />
 
 The ‘Available Inputs’ menu appears. You can see we now have fields from both the request and IBM Watson Visual Recognition.
 
-<img src="./images/image-20200616174252860.png" alt="image-20200616174252860" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616174252860.png" alt="image-20200616174252860" width="50%" align="left"/>
 
 If you scroll down, you’ll see we get down to Image->Images[]->Classifiers[]->Classes[]->Class name (together with the Score)
 
-<img src="./images/image-20200616174326095.png" alt="image-20200616174326095" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616174326095.png" alt="image-20200616174326095" width="50%" align="left"/>
 
 What does this mean?
 
@@ -186,7 +188,7 @@ We now know if there is a car or not in our image…if there is no car image (i.
 
 We use an App Connect ‘If’ node to visually show us our logic:
 
-<img src="./images/image-20200616174620180.png" alt="image-20200616174620180" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616174620180.png" alt="image-20200616174620180" width="60%" align="left"/>
 
 We visually create an ‘If imagecar is empty’ check. If it is empty, we send a ‘bad request’ response – note that we don’t need to remember that in REST APIs, ‘Bad Request’ is ‘HTTP 400’ – App Connect knows this – just pull the response from the drop down.
 
@@ -200,7 +202,7 @@ We’ve already connected to Salesforce, so we can use the Salesforce connector.
 
 Click on `Retrieve Contacts`
 
-<img src="./images/image-20200616174808434.png" alt="image-20200616174808434" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616174808434.png" alt="image-20200616174808434" width="60%" align="left"/>
 
 We’re going to use ‘Andy Young’ as our contact – he’s the contact for the insurance company that sends customers. Salesforce Developer Accounts have a pre-populated set of data that you can use to test. ‘Andy Young’ is one of those pre-populated contacts. We will hard-code his name for speed.
 
@@ -210,29 +212,29 @@ Change the name to ‘Andrew Young’ and we’ll find out. Note that App Connec
 
 Now click the ‘Test’ button
 
-<img src="./images/image-20200616175036839.png" alt="image-20200616175036839" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616175036839.png" alt="image-20200616175036839" width="50%" align="left"/>
 
 We can go straight off to SalesForce to check – we get this:
 
-<img src="./images/image-20200616175107749.png" alt="image-20200616175107749" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616175107749.png" alt="image-20200616175107749" width="50%" align="left"/>
 
-<img src="./images/image-20200616175137878.png" alt="image-20200616175137878" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616175137878.png" alt="image-20200616175137878" width="50%" align="left"/>
 
 OK, let’s put the field back to ‘Andy Young’ and try clicking ‘Test’ again.
 
-<img src="./images/image-20200616175222971.png" alt="image-20200616175222971" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616175222971.png" alt="image-20200616175222971" width="50%" align="left"/>
 
 Success! Hooray, let’s check our result. Click `View details`
 
-<img src="./images/image-20200616175300249.png" alt="image-20200616175300249" style="zoom:50%;" align="left"/>
+<img src="./images/image-20200616175300249.png" alt="image-20200616175300249" width="50%" align="left"/>
 
-<img src="./images/image-20200616175326523.png" alt="image-20200616175326523" style="zoom:70%;" align="left"/>
+<img src="./images/image-20200616175326523.png" alt="image-20200616175326523" width="70%" align="left"/>
 
 There are our test results, right in the tooling, right from the real system in the cloud. This works with all of the connectors such as Watson in our flows here. It’s a great way of checking your integration calls work the way you want them to without having to test the whole flow.
 
 Now we have the ID that we need, let’s create our Salesforce case. Click on the Salesforce – Create case node. Note that we just re-use the same connector but with a different operation and data.
 
-<img src="./images/image-20200616175408619.png" alt="image-20200616175408619" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616175408619.png" alt="image-20200616175408619" width="60%" align="left"/>
 
 Note we we can see that our contact ID comes from the previous `retrieve contact` Salesforce Call. The Name and email come from the API Request. 
 
@@ -246,7 +248,7 @@ To add a photograph, we need to create a salesforce attachement – that’s eas
 
 Click on `Create Attachment`
 
-<img src="./images/image-20200616175524660.png" alt="image-20200616175524660" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616175524660.png" alt="image-20200616175524660" width="60%" align="left"/>
 
 Note that we use the Case ID that is a returned value from the ‘Create Case’ connector call – it’s been kept in the flow automatically. We send the PhotoOfCar as a base64 string and we tell Salesforce that the content Type is image/jpeg.
 
@@ -256,11 +258,11 @@ We store this in Salesforce for future reference – if the customer is angry or
 
 First, we’ll use the Watson Tone Analyzer; Click on `Get tone analysis`
 
-<img src="./images/image-20200616175622530.png" alt="image-20200616175622530" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616175622530.png" alt="image-20200616175622530" width="60%" align="left"/>
 
 Then we’ll add a comment to the case with the Salesforce connector and give it the tone name from Watson.
 
-<img src="./images/image-20200616175652190.png" alt="image-20200616175652190" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616175652190.png" alt="image-20200616175652190" width="60%" align="left"/>
 
 ### 8. Send a response back to the customer with their Salesforce case reference
 
@@ -268,7 +270,7 @@ For future enquiries and also an estimate of how long it will take to repair and
 
 Click on the Response node – we just fill in the values we want, like all the others.
 
-<img src="./images/image-20200616175830303.png" alt="image-20200616175830303" style="zoom:60%;" align="left"/>
+<img src="./images/image-20200616175830303.png" alt="image-20200616175830303" width="60%" align="left"/>
 
 Click ‘Done’ we’ve built the flow – let’s start it!
 
