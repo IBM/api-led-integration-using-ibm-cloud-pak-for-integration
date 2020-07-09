@@ -2,7 +2,7 @@
 
 Login to ICP4i and navigate to App Connect Designer. Click on the `Car Insurance Cognitive API Lab Short` tile on the dashboard.
 
-<img src="./images/image-20200616161203051.png" alt="image-20200616161203051" width="50%"/>
+<img src="./images/image-20200616161203051.png" alt="image-20200616161203051" width="30%"/>
 
 
 
@@ -72,7 +72,7 @@ Designer automatically creates an API “Request” and “Response” node for 
 
 Click on the ‘Request’ node.
 
-![image-20200616171718268](./images/image-20200616171718268.png)
+<img src="./images/image-20200616171718268.png" alt="image-20200616171718268" width="50%" />
 
 Note how the request body is created from the model – and sample data is automatically generated. When building there is literally nothing to do here – it’s done for you.
 
@@ -80,7 +80,7 @@ Note how the request body is created from the model – and sample data is autom
 
 If it is not a valid picture, Watson will return an error immediately to the user calling the API.
 
-![image-20200616171813202](./images/image-20200616171813202.png)
+<img src="./images/image-20200616171813202.png" alt="image-20200616171813202" width="50%" />
 
 We use the built-in Watson Visual Recognition connector that we configured earlier. Note that we selected `App Connect Trial` account here. If you had it named incorrectly (e.g. `Account 1`) then you would have an error. To fix it, change to `App Connect Trial` in the pull down.
 
@@ -116,7 +116,7 @@ We’re going to set variables to check for three things:
 - Is there a person in the image? `imagePerson`
 - Is there a roadster (convertible) car in the image – this is for the extension lab, but we have the logic here anyway.
 
-![image-20200616172414907](./images/image-20200616172414907.png)
+<img src="./images/image-20200616172414907.png" alt="image-20200616172414907" width="50%" />
 
 Let’s look at ‘is there a car?’
 
@@ -124,7 +124,7 @@ Click on the menu on the right, then expand ‘IBM Watson Visual Recognition’
 
 *(in the lab environment, you might need to zoom out on the browser to about 67% to see the menu – use the Firefox hamburger menu on the top right and choose ‘zoom’ as below)*
 
-<img src="./images/image-20200616174222627.png" alt="image-20200616174222627" width="50%"  />
+<img src="./images/image-20200616174222627.png" alt="image-20200616174222627" width="40%"  />
 
 The ‘Available Inputs’ menu appears. You can see we now have fields from both the request and IBM Watson Visual Recognition.
 
@@ -152,9 +152,9 @@ App connect does it by using a formula – just like a spreadsheet.
 
 Close the pull-down and click on the ‘Classes’ bubble in the ‘imageCar’ field. Click ‘Edit expression’
 
-![image-20200616174412565](./images/image-20200616174412565.png)
+<img src="./images/image-20200616174412565.png" alt="image-20200616174412565" width="50%" />
 
-![image-20200616174426679](./images/image-20200616174426679.png)
+<img src="./images/image-20200616174426679.png" alt="image-20200616174426679" width="50%" />
 
 What we did is click on the hierarchy pull down to build a query that looks like this:
 
@@ -170,7 +170,7 @@ We use the same approach to populate imagePerson using [class=’car’] and ima
 
 If you want to more easily see the query expression, then hover over the ‘classes’ bubble e.g. here:
 
-![image-20200616174504163](./images/image-20200616174504163.png)
+<img src="./images/image-20200616174504163.png" alt="image-20200616174504163" width="50%" />
 
 All mapping is done the same way -for example, we want a string that joins (concatenates) all of the classes (things that Watson can see) together, separated by commas so it’s Human Readable. For this we use ‘apply a function’ and select ‘Join’ from String functions, just like building a spreadsheet formula.
 
@@ -228,7 +228,7 @@ Success! Hooray, let’s check our result. Click `View details`
 
 <img src="./images/image-20200616175300249.png" alt="image-20200616175300249" width="50%" />
 
-<img src="./images/image-20200616175326523.png" alt="image-20200616175326523" width="70%" />
+<img src="./images/image-20200616175326523.png" alt="image-20200616175326523" width="50%" />
 
 There are our test results, right in the tooling, right from the real system in the cloud. This works with all of the connectors such as Watson in our flows here. It’s a great way of checking your integration calls work the way you want them to without having to test the whole flow.
 
@@ -274,7 +274,7 @@ Click on the Response node – we just fill in the values we want, like all the 
 
 Click ‘Done’ we’ve built the flow – let’s start it!
 
-![image-20200616175858245](./images/image-20200616175858245.png)
+<img src="./images/image-20200616175858245.png" alt="image-20200616175858245" width="67%" />
 
 
 
