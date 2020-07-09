@@ -1,5 +1,3 @@
-# Work-in-progress
-
 # Manage and Secure Cognitive Car Claim Processing API with ICP4i API Lifecycle Management
 
 This tutorial is a part of the series [API-led Application Integration with IBM Cloud Pak for Integration](https://github.ibm.com/muralidhar-chavan/api-led-integration) . In the [preceeding tutorial](https://github.ibm.com/muralidhar-chavan/api-led-integration/tree/master/Application%20Integration) we built an Integration application flow connecting Salesforce, and some of the Watson AI services. The integration application exposed an API.
