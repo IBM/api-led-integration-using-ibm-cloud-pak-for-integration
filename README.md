@@ -6,6 +6,6 @@ In this series we will demonstrate how to create an API which takes a car repair
 
 The series will consist of two tutorials as follows:
 
-1. Part1 - [Build a Cognitive Car Claim Processing application with ICP4i Integration capabilities](https://github.ibm.com/muralidhar-chavan/api-led-integration/tree/master/Application-Integration) and
-2. Part2 - [Manage and Secure Cognitive Car Claim Processing API with ICP4i API Lifecycle Management](https://github.ibm.com/muralidhar-chavan/api-led-integration/tree/master/API-Management)
+1. Part1 - [Build a Cognitive Car Claim Processing application with ICP4i Integration capabilities](https://github.com/IBM/api-led-integration-using-ibm-cloud-pak-for-integration/tree/master/Application-Integration) and
+2. Part2 - [Manage and Secure Cognitive Car Claim Processing API with ICP4i API Lifecycle Management](https://github.com/IBM/api-led-integration-using-ibm-cloud-pak-for-integration/tree/master/API-Management)
 
